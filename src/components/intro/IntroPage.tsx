@@ -1,11 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import 'materialize-css/dist/css/materialize.min.css';
 import M from 'materialize-css';
-import Datepicker = M.Datepicker;
-import IntroPage from "./components/intro/IntroPage";
-import ExamPage from "./components/exam/ExamPage";
 
-function App() {
+
+function Intro() {
 
     // State to store the selected date
     const [selectedDate, setSelectedDate] = useState<string>("");
@@ -41,11 +39,27 @@ function App() {
     }, []);
 
     return (
-        <div className="App">
-            {/*<IntroPage></IntroPage>*/}
-            <ExamPage></ExamPage>
+        <div>
+            <div className="valign-wrapper container">
+                <div className="col s12 m8 offset-m2 l6 offset-l3">
+                    <div className="card-panel grey lighten-5 z-depth-1">
+                        <div className="row valign-wrapper">
+                            <div className="col s2">
+                                <img src="https://materializecss.com/images/yuna.jpg" alt=""
+                                     className="circle responsive-img"/>
+                            </div>
+                            <div className="col s10">
+              <span className="black-text">
+                This is a square image. Add the "circle" class to it to make it appear circular.
+              </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     );
 }
 
-export default App;
+export default Intro;
