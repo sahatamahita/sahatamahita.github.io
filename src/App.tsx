@@ -1,11 +1,29 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import 'materialize-css/dist/css/materialize.min.css';
 import M from 'materialize-css';
+import Datepicker = M.Datepicker;
 
 function App() {
+
+    // State to store the selected date
+    const [selectedDate, setSelectedDate] = useState<string>("");
+
+    useEffect(() => {console.log({selectedDate})}, [selectedDate])
+
+
     useEffect(() => {
-        // Initialize Materialize components
-        M.AutoInit();
+
+
+        function handleDateChange (this: M.Datepicker, date: Date)  {
+            setSelectedDate(date.toDateString());
+        };
+
+        const datepickerElems = document.querySelectorAll('.datepicker');
+        M.Datepicker.init(datepickerElems, {
+            onSelect: handleDateChange, // Call the handleDateChange function when a date is selected
+            format: 'yyyy-mm-dd', // Set the date format as needed
+            autoClose: true, // Automatically close the date picker after selection
+        });
 
         // Initialize Autocomplete
         const autocompleteElems = document.querySelectorAll('.autocomplete');
@@ -32,7 +50,12 @@ function App() {
         </nav>
 
         <div>
-            <input type="text" className="datepicker"></input>
+            <input
+                type="text"
+                id="datepicker"
+                className="datepicker"
+                value={selectedDate}
+            />
         </div>
 
         <div className="container">
