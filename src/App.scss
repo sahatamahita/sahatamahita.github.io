@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+
 }
 
 .App-logo {
@@ -35,4 +35,16 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.exam-card {
+
+  .number-controller {
+    margin-bottom: 0;
+    .current-number {
+      font-size: 1.5em;
+    }
+  }
+
 }

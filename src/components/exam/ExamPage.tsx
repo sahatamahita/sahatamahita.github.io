@@ -2,14 +2,7 @@ import React, {useEffect, useState} from 'react';
 import 'materialize-css/dist/css/materialize.min.css';
 import M from 'materialize-css';
 
-
 function ExamPage() {
-
-
-
-    useEffect(() => {
-
-    }, []);
 
     return (
         <div>
@@ -17,7 +10,7 @@ function ExamPage() {
                 <nav>
                     <div className="nav-wrapper container">
                         <label className="left white-text">59:59</label>
-                        <a href="#!" className="brand-logo">XXX</a>
+                        <a href="#!" className="brand-logo">Kode-XXX</a>
                         <ul className="right">
                             <li>
                                 <div className="chip">
@@ -32,15 +25,19 @@ function ExamPage() {
 
 
 
-
-
             <div className="valign-wrapper">
 
                 <div className="row">
-
-                        <div className="card">
+                        <div className="card exam-card">
+                            <div className="card-action">
+                                <div className="row number-controller">
+                                    <div className="col s4 center"><a href="#" className="btn btn-small grey btn-floating left"><i className="material-icons">chevron_left</i></a></div>
+                                    <div className="col s4 center"><label className="current-number">No. 1</label></div>
+                                    <div className="col s4 center"><a href="#" className="btn btn-small blue btn-floating right"><i className="material-icons">chevron_right</i></a></div>
+                                </div>
+                            </div>
                             <div className="card-content blue-grey darken-1 white-text">
-                                <span className="card-title">No. 1</span>
+
                                 <p>Menurut pernyataan dalam pembukaan UUD 1945, perjuangan kemerdekaan merupakan tindakan yang
                                     diberkati oleh Allah karena ?</p>
                             </div>
@@ -61,28 +58,23 @@ function ExamPage() {
                             <div className="card-action center">
                                 <a href="#" className="btn btn-block waves-effect waves-light">Simpan</a>
                             </div>
-                            <div className="card-action">
-                                <a href="#" className="left">Sebelumnya</a>
-                                <a href="#" className="right">Lanjut</a>
-                            </div>
-
-                            <div className="card-content">
-                                <div className="">
-                                    <div className="progress">
-                                        <div className="determinate" style={{ width: '10%' }}></div>
-                                    </div>
+                            <div className="card-panel">
+                                <div className="progress">
+                                    <div className="determinate" style={{ width: '10%' }}></div>
                                 </div>
                                 <ul className="collapsible">
                                     <li>
                                         <a className="collapsible-header grey-text">
                                             <i className="material-icons">block</i>
                                             Belum Dijawab
-                                            <span className="new badge red" data-badge-caption="">9</span></a>
+                                            <span className="new badge red" data-badge-caption="">9</span>
+                                        </a>
                                     </li>
                                     <li>
                                         <a className="collapsible-header blue-grey-text">
                                             <i className="material-icons">assignment</i>
                                             Pilih Nomor
+                                            <span className="new badge grey" data-badge-caption="total">10</span>
                                         </a>
                                     </li>
                                 </ul>
