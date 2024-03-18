@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/sahatamahita/static/css/main.4fb3427e.css",
+    "main.js": "/sahatamahita/static/js/main.63e854f0.js",
+    "static/js/787.f52e3bd7.chunk.js": "/sahatamahita/static/js/787.f52e3bd7.chunk.js",
+    "index.html": "/sahatamahita/index.html",
+    "main.4fb3427e.css.map": "/sahatamahita/static/css/main.4fb3427e.css.map",
+    "main.63e854f0.js.map": "/sahatamahita/static/js/main.63e854f0.js.map",
+    "787.f52e3bd7.chunk.js.map": "/sahatamahita/static/js/787.f52e3bd7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4fb3427e.css",
+    "static/js/main.63e854f0.js"
+  ]
+}
